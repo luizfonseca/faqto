@@ -24,9 +24,6 @@ gem 'pg_array_parser'
 
 
 # Production-only libs
-group :production do
-  gem 'heroku-deflater'
-end
 
 
 # Caching of pages or actions
