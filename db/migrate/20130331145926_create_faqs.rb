@@ -3,7 +3,7 @@ class CreateFaqs < ActiveRecord::Migration
     create_table :faqs do |t|
       t.string :name
       t.string :description
-      t.references :user_id, index: true
+      t.references :user, index: true
 
       t.timestamps
     end

@@ -1,4 +1,16 @@
 Faqly::Application.routes.draw do
+
+  resources :faqs, only: [:show] do
+    resources :questions, only: [:index] do
+        collection do
+          get '/:tag', to: 'questions#index', as: :tag
+        end
+    end
+  end
+
+
+  root to: 'pages#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

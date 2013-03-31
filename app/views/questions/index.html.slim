@@ -1,0 +1,19 @@
+.row
+  .large-12.columns
+    header.title
+      h1= t 'faq.title', user: @faq.user.name, title: @faq.name
+      span.subheader= @faq.description
+
+
+.row.questions.with_vertical_tags
+  
+  .large-2.columns
+    h4= t 'faq.navigation.head'
+    ul.side-nav
+      - @faq.tags.each do |tag|
+        li[class=(params[:tag] == tag ? 'active' : '')]= link_to tag, tag_faq_questions_path(@faq.user, @faq, tag: tag) 
+
+  .large-10.columns
+    - @questions.each do |q|
+      h3= q.title
+      p=  simple_format(q.answer)
