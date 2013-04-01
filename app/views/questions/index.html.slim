@@ -1,7 +1,12 @@
+= content_for :title, @faq.full_title
+
+= content_for :header_content do
+  header.row
+    h3.faqly= link_to "Faqly", root_path    
 .row
   .large-12.columns
     header.title
-      h1= t 'faq.title', user: @faq.user.name, title: @faq.name
+      h1= @faq.full_title 
       span.subheader= @faq.description
 
 
@@ -12,7 +17,7 @@
     ul.side-nav
       - @faq.tags.each do |tag|
         li[class=(params[:tag] == tag ? 'active' : '')]= link_to tag, tag_faq_questions_path(@faq.user, @faq, tag: tag) 
-
+        li.divider
   .large-10.columns
     - @questions.each do |q|
       h3= q.title
