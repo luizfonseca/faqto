@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
 
   def set_x_frame_options
-    response.headers["X-Frame-Options"] = nil
+    response.headers["X-Frame-Options"] = ''
   end
 
 end
