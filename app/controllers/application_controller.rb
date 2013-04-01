@@ -4,7 +4,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
 
+  before_filter do
+    set_x_frame_options
+  end
 
 
+
+  def set_x_frame_options
+    response.headers["X-Frame-Options"] = nil
+  end
 
 end
