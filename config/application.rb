@@ -23,5 +23,8 @@ module Faqly
 
     # Dont initialize when precompiling assets
     config.assets.initialize_on_precompile = false 
+
+    # Do not display in frames
+    config.action_dispatch.x_frame_options = 'ALLOW'
   end
 end
