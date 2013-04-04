@@ -20,9 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
   faq:
     title: "%{user} / %{title}"
     navigation:
-      head: "Navigation"
+      head: "Navegação"
 
