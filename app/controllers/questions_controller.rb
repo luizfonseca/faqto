@@ -1,6 +1,4 @@
 class QuestionsController < ApplicationController
-  inherit_resources
-  belongs_to :faq
 
   def index
     if params[:tag] && params[:tag].present?
