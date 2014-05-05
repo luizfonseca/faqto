@@ -1,6 +1,7 @@
 Faqly::Application.routes.draw do
 
-  resources :faqs, only: [:show] do
+  devise_for :users, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', sign_up: 'let-me-in' }
+  resources :faqs do
     resources :questions, only: [:index] do
         collection do
           get '/:tag', to: 'questions#index', as: :tag

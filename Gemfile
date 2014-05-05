@@ -1,19 +1,20 @@
 source 'https://rubygems.org'
 
 # Default ruby version to run this project
-ruby '2.0.0'
+ruby '2.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.beta1'
-
-# Avoid repetition on your controllers
-gem 'inherited_resources'
+gem 'rails', '4.1.0'
 
 # Use postgres as default database even for development
 gem 'pg'
 
+gem 'before_actions'
+gem 'devise'
+
 # Use unicorn as the app server
 gem 'unicorn'
+gem 'foreman'
 
 # Templating engine to avoid too much tag typing
 gem 'slim-rails'
@@ -24,8 +25,7 @@ gem 'active_decorator'
 # For tags. Yet.
 gem 'pg_array_parser'
 
-# Caching of pages or actions
-gem 'actionpack-action_caching'
+gem 'spring', group: :development
 
 # Necessary to generate _spec files when using rails generate
 group :development, :test do
@@ -37,15 +37,9 @@ group :test do
   gem 'shoulda'
 end
 
-# Not required on production
-group :assets do
-  gem 'sass-rails',   '~> 4.0.0.beta1'
-  gem 'coffee-rails', '~> 4.0.0.beta1'
-  gem 'uglifier',     '>= 1.0.3'
-  gem 'sprockets-rails', :require => 'sprockets/railtie'
-  gem 'zurb-foundation'
-  gem 'foundation-icons-sass-rails'
-end
+gem 'sass-rails'
+gem 'uglifier'
+gem 'foundation-rails'
 
 # You know
 gem 'jquery-rails'

@@ -1,47 +1,49 @@
-@import url('http://fonts.googleapis.com/css?family=Oleo+Script:700')
-@import foundation_defaults
-
+@import foundation_and_overrides
 
 // General classes
-.faqly
-  font-family: "Oleo Script", cursive
 .head
   background: black
-.faqly
-  color: white
-  font-size: 2em
-  margin: 0 .4em
-  text-shadow: 0 1px 2px black
-  color: white
 
 #faqs, #questions
   header, header.title
     margin-bottom: 2.5em
   h1
     margin-bottom: 0
-  
   .side-nav li
     text-transform: capitalize
 
+.logo-home
+  margin-top: 3em
+  h1
+    margin-top: .6em
+    margin-bottom: 0
+
+.login-action
+  padding-top: .6em
+  nav a
+    color: white
+    padding: 1em
+    &:hover
+      color: #215181
+      border: 1px solid white
+      background: white
+
+
+
 #pages.index
-  background: #47b6d2 
   text-align: center
-  .logo
-    background: #333
-  h1, p
-    text-shadow: 0 1px 2px black
-    color: white
-    font-size: 3.5em
-    margin-top: 2em
-    margin-bottom: .4em
-  p
-    color: white
-    font-size: 1.5em
-    margin-top: -1em
-    text-shadow: 0 1px 1px #333
-  .action
-    margin-top: 3em
+  .header
+    background: #47b6d2 
+  h1, h4
+    color: darken(white, 5%)
   .button
+    margin-top: 1em
     font-size: 2em
     padding-left: 2em
     padding-right: 2em
+    background: none
+    border: 2px solid white
+    border-radius: 4px
+    &:hover
+      background: white
+      color: #215181

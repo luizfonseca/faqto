@@ -1,17 +1,32 @@
-.logo
-  .row
-    .large-12.columns
-      p &nbsp;
-      
 .header
+  .row.login-action
+    .large-12.columns.text-right
+      nav
+        = link_to "sign up", new_user_registration_path
+        = link_to "login", new_user_session_path
+  .row.logo-home
+    .large-12.columns
+      = image_tag "faqto.png", size: '200x200', title: "This is a hover. It's nice."
+      h1 It's time to answer those questions 
   .row
     .large-12.columns
-      h1 Create faqs like a Pro.
-  .row
-    .large-12.columns
-      p 
-        | Stop being sad. Be awesome instead.
+      h4 With faq.to you can easily create questions and gather information
+      h4 about who reads and when.
   .row.action
     .large-12.large-centered.columns
-      = link_to 'Run, forrest.', '', class: :button
+      = link_to "Get started", new_faq_path, class: :button
 
+
+.about-content
+  .row
+    .large-12.columns
+      .row
+        .large-4.columns
+          h2 Easily
+          = image_tag ""
+        .large-4.columns
+          h2 Easily
+          = image_tag ""
+        .large-4.columns.end
+          h2 Easily
+          = image_tag ""
