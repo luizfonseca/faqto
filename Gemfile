@@ -28,6 +28,10 @@ gem 'pg_array_parser'
 
 gem 'spring', group: :development
 
+group :production do
+  gem 'rails_12factor'
+end
+
 # Necessary to generate _spec files when using rails generate
 group :development, :test do
   gem 'rspec-rails'
