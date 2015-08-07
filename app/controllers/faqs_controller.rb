@@ -7,6 +7,7 @@ class FaqsController < ApplicationController
 
 
   def new; end
+
   def create; end
 
 
