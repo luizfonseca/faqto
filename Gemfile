@@ -20,8 +20,6 @@ gem 'foreman'
 # Templating engine to avoid too much tag typing
 gem 'slim-rails'
 
-# Using decorators, go check: https://github.com/drapergem/draper
-gem 'active_decorator'
 
 # For tags. Yet.
 gem 'pg_array_parser'
