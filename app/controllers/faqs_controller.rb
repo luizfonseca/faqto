@@ -1,9 +1,7 @@
 class FaqsController < ApplicationController
 
 
-  before_actions do
-    actions(:new, :create) { @faq = Faq.new(faq_params) }
-  end
+  before_filter only: [:new, :create] { @faq = Faq.new(faq_params) }
 
 
   def new; end
